@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تا بیداری بزرگ | The Great Awakening</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(#111, #222);
+      color: #eee;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+    }
+    #countdown {
+      font-size: 2em;
+      margin: 1em 0;
+      direction: ltr;
+    }
+    .section {
+      margin: 2em auto;
+      max-width: 700px;
+      background: #1c1c1c;
+      padding: 1.5em;
+      border-radius: 10px;
+    }
+    .en {
+      direction: ltr;
+      text-align: left;
+      font-size: 0.95em;
+      margin-top: 1em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>تا بیداری بزرگ</h1>
+  <div id="countdown">در حال بارگذاری...</div>
+  
+  <div class="section">
+    <h2>این فقط یک پیش‌بینی نیست...</h2>
+    <p>
+      تاریخ ۱ ژوئن ۲۰۲۸ را به عنوان نمادی از امید، تلاش و آمادگی برای جهانی دور از ظلم انتخاب کرده‌ایم.
+      این شمارش معکوس نه وعده ظهور، بلکه فراخوانی برای بیداری قلب‌ها و حرکت به سوی عدالت است.
+    </p>
+    <div class="en">
+      <strong>Not a prophecy, but a purpose.</strong><br>
+      June 1, 2028 is chosen as a symbol — not of prediction, but of global awakening. It is a reminder to rise, unite, and purify the world with justice and mercy.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>الهام‌گرفته از عاشورا، نیمه خرداد، و انتظار</h2>
+    <p>
+      این تاریخ هم‌زمان با شب عاشورا و نیمه خرداد است؛
+      پیوندی از سه لحظه تاریخی: ایثار، بیداری، و امید به ظهور.
+    </p>
+    <div class="en">
+      A convergence of history: Ashura (sacrifice), Mid-Khordad (awakening), and Mahdism (hope).
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>چه باید کرد؟</h2>
+    <ul style="text-align:right;">
+      <li>با مظلومان هم‌صدا باشیم</li>
+      <li>اصلاح درونی و اخلاقی را آغاز کنیم</li>
+      <li>به جای ناامیدی، بذر آگاهی بکاریم</li>
+      <li>به جای پیش‌بینی، آمادگی را تمرین کنیم</li>
+    </ul>
+    <div class="en">
+      <ul>
+        <li>Stand with the oppressed</li>
+        <li>Begin personal and moral reform</li>
+        <li>Sow awareness, not despair</li>
+        <li>Prepare — don’t just predict</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const targetDate = new Date("2028-06-01T00:00:00Z");
+    const countdown = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        countdown.innerHTML = "زمان بیداری فرارسید!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdown.innerHTML = ${days} روز، ${hours} ساعت، ${minutes} دقیقه، ${seconds} ثانیه;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
